@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const exec = require('child_process').exec;
 
-gulp.task('build', 'Compiles all TypeScript source files', ['lint'], function (cb) {
+gulp.task('build', 'Compiles all TypeScript source files', [], function (cb) {
   exec('tsc --version', function (err, stdout, stderr) {
     console.log('Using TypeScript ', stdout);
     if (stderr) {
